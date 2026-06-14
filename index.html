@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroLegal - Sustentabilidade e Legislação</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="progress-container"><div class="progress-bar" id="barra-progresso"></div></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">
+                <span class="logo-icon">🌿</span>
+                <span data-pt="AgroLegal" data-en="AgroLegal">AgroLegal</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" data-pt="Início" data-en="Home" class="active">Início</a>
+                <a href="parana.html" data-pt="Paraná" data-en="Paraná">Paraná</a>
+                <a href="quiz.html" data-pt="Quiz" data-en="Quiz">Quiz</a>
+                <a href="denuncia.html" data-pt="Denúncia" data-en="Report">Denúncia</a>
+                <button class="btn-util" id="btn-lang" onclick="alternarIdioma()">🇺🇸 EN</button>
+                <button class="btn-util" id="btn-dark" onclick="alternarDarkMode()">🌙 Modo Escuro</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 data-pt="🌱 AgroLegal" data-en="🌱 AgroLegal">🌱 AgroLegal</h1>
+        <p data-pt="Informação, sustentabilidade e conscientização ambiental no campo" data-en="Information, sustainability, and environmental awareness in the fields">Informação, sustentabilidade e conscientização ambiental no campo</p>
+        <a href="#leis" class="btn-hero" data-pt="Explore os Temas" data-en="Explore Themes">Explore os Temas</a>
+    </header>
+
+    <section id="leis">
+        <h2 data-pt="📚 Pilares do Agro Sustentável" data-en="📚 Pillars of Sustainable Agro">📚 Pilares do Agro Sustentável</h2>
+        <div class="cards">
+            <a href="paginas/desmatamento.html" class="card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80');"></div>
+                <h3 data-pt="🌳 Desmatamento" data-en="🌳 Deforestation">🌳 Desmatamento</h3>
+                <p data-pt="Entenda as regras da Reserva Legal e APPs." data-en="Understand Legal Reserve and APP regulations.">Entenda as regras da Reserva Legal e APPs.</p>
+            </a>
+            <a href="paginas/queimadas.html" class="card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=500&q=80');"></div>
+                <h3 data-pt="🔥 Queimadas" data-en="🔥 Wildfires">🔥 Queimadas</h3>
+                <p data-pt="Os perigos do uso incorreto do fogo no manejo." data-en="The dangers of incorrect fire use in management.">Os perigos do uso incorreto do fogo no manejo.</p>
+            </a>
+            <a href="paginas/agrotoxicos.html" class="card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=500&q=80');"></div>
+                <h3 data-pt="☠️ Agrotóxicos" data-en="☠️ Pesticides">☠️ Agrotóxicos</h3>
+                <p data-pt="Uso seguro, EPIs e a tríplice lavagem." data-en="Safe use, PPE, and triple-rinsing rules.">Uso seguro, EPIs e a tríplice lavagem.</p>
+            </a>
+            <a href="paginas/rios.html" class="card">
+                <div class="card-img-container" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80');"></div>
+                <h3 data-pt="💧 Preservação de Rios" data-en="💧 River Preservation">💧 Preservação de Rios</h3>
+                <p data-pt="A importância vital das Matas Ciliares." data-en="The vital importance of Riparian Forests.">A importância vital das Matas Ciliares.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>🌿 AgroLegal — Agrinho 2026. Viva o Agro Sustentável!</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

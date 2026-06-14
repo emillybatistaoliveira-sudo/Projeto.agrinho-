@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sustentável - AgroLegal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-text"><span class="logo-icon">🌿</span><span>AgroLegal</span></a>
+            <div class="nav-links">
+                <a href="index.html" data-pt="Início" data-en="Home">Início</a>
+                <a href="parana.html" data-pt="Paraná" data-en="Paraná">Paraná</a>
+                <a href="quiz.html" data-pt="Quiz" data-en="Quiz" class="active">Quiz</a>
+                <a href="denuncia.html" data-pt="Denúncia" data-en="Report">Denúncia</a>
+                <button class="btn-util" id="btn-lang" onclick="alternarIdioma()">🇺🇸 EN</button>
+                <button class="btn-util" id="btn-dark" onclick="alternarDarkMode()">🌙 Modo Escuro</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="conteudo-principal">
+        <div class="pagina">
+            <h1 data-pt="🧠 Quiz AgroLegal" data-en="🧠 AgroLegal Quiz">🧠 Quiz AgroLegal</h1>
+            <p data-pt="Teste o seu conhecimento e conquiste o seu Certificado de Protetor do Campo!" data-en="Test your knowledge and claim your Field Protector Certificate!">Teste o seu conhecimento e conquiste o seu Certificado de Protetor do Campo!</p>
+            
+            <form id="quiz-form" style="margin-top: 30px;">
+                <div class="pergunta">
+                    <p data-pt="1. Qual prática protege os rios contra contaminação?" data-en="1. Which practice protects rivers from contamination?">1. Qual prática protege os rios contra contaminação?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p1" value="errado"> <span data-pt="Aplicar defensivos antes da chuva." data-en="Apply pesticides right before heavy rain.">Aplicar defensivos antes da chuva.</span></label>
+                        <label><input type="radio" name="p1" value="correto"> <span data-pt="Respeitar e preservar as Matas Ciliares." data-en="Respect and preserve Riparian Forests.">Respeitar e preservar as Matas Ciliares.</span></label>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p data-pt="2. Queimar restos vegetais sem autorização técnica é:" data-en="2. Burning crop residue without technical authorization is:">2. Queimar restos vegetais sem autorização técnica é:</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p2" value="correto"> <span data-pt="Crime ambiental sujeito a multas graves." data-en="An environmental crime subject to heavy fines.">Crime ambiental sujeito a multas graves.</span></label>
+                        <label><input type="radio" name="p2" value="errado"> <span data-pt="Prática recomendada para limpar o solo." data-en="A recommended practice to clean the soil.">Prática recomendada para limpar o solo.</span></label>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <p data-pt="3. O que deve ser feito com embalagens vazias de agrotóxicos?" data-en="3. What should be done with empty pesticide containers?">3. O que deve ser feito com embalagens vazias de agrotóxicos?</p>
+                    <div class="opcoes">
+                        <label><input type="radio" name="p3" value="errado"> <span data-pt="Descartar no lixo comum ou queimar." data-en="Discard in regular trash or burn them.">Descartar no lixo comum ou queimar.</span></label>
+                        <label><input type="radio" name="p3" value="correto"> <span data-pt="Realizar a Tríplice Lavagem e devolver nos postos." data-en="Perform Triple-Rinsing and return to delivery points.">Realizar a Tríplice Lavagem e devolver nos postos.</span></label>
+                    </div>
+                </div>
+
+                <div class="campo-nome" style="margin: 20px 0; text-align: left;">
+                    <label for="nome-aluno" style="font-weight: bold;" data-pt="Digite seu Nome Completo para o Certificado:" data-en="Enter your Full Name for the Certificate:">Digite seu Nome Completo para o Certificado:</label>
+                    <input type="text" id="nome-aluno" placeholder="Seu nome aqui..." style="width: 100%; padding: 12px; margin-top: 8px; border-radius: 8px; border: 1px solid #ccc;">
+                </div>
+
+                <button type="button" class="btn-hero" style="border:none; width:100%; cursor:pointer;" onclick="calcularResultadoPremium()" data-pt="Verificar Desempenho & Gerar Certificado" data-en="Check Score & Generate Certificate">Verificar Desempenho & Gerar Certificado</button>
+            </form>
+
+            <div id="resultado"></div>
+
+            <div id="certificado-area" class="certificado" style="display: none;">
+                <h2 data-pt="📜 CERTIFICADO DE MÉRITO" data-en="📜 CERTIFICATE OF MERIT">📜 CERTIFICADO DE MÉRITO</h2>
+                <p data-pt="Certificamos honorificamente que" data-en="We honorably certify that">Certificamos honorificamente que</p>
+                <h3 id="cert-nome">[Nome do Aluno]</h3>
+                <p data-pt="concluiu com sucesso o Quiz Ecológico do portal **AgroLegal**, demonstrando conhecimento exemplar em práticas agrícolas sustentáveis e conservação do ambiente campo-florestal no Paraná." data-en="successfully completed the Ecological Quiz on the **AgroLegal** portal, demonstrating exemplary knowledge in sustainable agricultural practices and field-forest conservation in Paraná.">concluiu com sucesso o Quiz Ecológico do portal **AgroLegal**, demonstrando conhecimento exemplar em práticas agrícolas sustentáveis e conservação do ambiente campo-florestal no Paraná.</p>
+                <div class="Selo" style="margin-top: 20px; font-weight: bold; color: #1b5e20;">✨ Guardião Ambiental — Agrinho 2026 ✨</div>
+                <button class="btn-util" style="margin-top:20px; background:#1b5e20;" onclick="window.print()" data-pt="🖨️ Imprimir Certificado" data-en="🖨️ Print Certificate">🖨️ Imprimir Certificado</button>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>🌿 AgroLegal — Agrinho 2026</p></footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
